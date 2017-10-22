@@ -1,5 +1,7 @@
 package data.structure.linear;
 
+import org.omg.CORBA.OBJ_ADAPTER;
+
 public class Table<T> implements LinearTable<T> {
     private Object[] object = {};
     private static int ININT_LENGTH = 2;
@@ -36,7 +38,7 @@ public class Table<T> implements LinearTable<T> {
         return this.len == 0;
     }
 
-    public int length() {
+    public int getLength() {
         return this.len;
     }
 
@@ -76,30 +78,40 @@ public class Table<T> implements LinearTable<T> {
     @Override
     public String toString() {
         String str = "";
-        for(int i = 0 ;i<len;i++){
-            str =i+"="+object[i]+",";
+        for (int i = 0; i < this.len; i++) {
+            System.out.println(i + "=" + object[i] + ",");
         }
         return str;
     }
 
-    public void insertElem(int i, T x) {
-        //数组长度不够
-        Object[] temp = new Object[this.len == object.length ? ININT_LENGTH * 2 : object.length];
-        for (int j = 0; j < this.len; i++) {
-            temp[j] = object[j];
+    public void insertElem(int i, T x) throws MyException {
+        //插入位置判断 是否合法
+        if(i>this.len) {
+            throw new MyException("this.len=" + this.len + "and i =" + i);
         }
-        //插入数据 进行移动
-        temp[i] = x;
+        Object[] temp= new Object[object.length];
+        //数组长度检验
+        if(this.len+1 > object.length) {
+            temp = new Object[object.length*2];
+        }
+        //数组移动
 
-        for (int j = len; j > i; j--) {
-            temp[j + 1] = temp[j];
-        }
-        object = temp;
-        this.len=this.len++;
+        //增加链表数量
+
     }
 
     public void append(T x) {
-
+        Object[] temp= new Object[object.length];
+        if(this.len+1 >object.length) {
+             temp = new Object[object.length*2];
+        for (int i=0;i<this.len;i++) {
+            temp[i] = object[i];
+        }
+            temp[this.len++] = x;
+          object= temp;
+        } else {
+            object[this.len++] = x;
+        }
     }
 
     public T remove(int i) {

@@ -24,7 +24,7 @@ public interface LinearTable<T> {
      * 返回线性表长度
      * @return
      */
-    int length();
+    int getLength();
 
     /**
      * 查找，返回首次出现的关键字为key元素
@@ -65,7 +65,7 @@ public interface LinearTable<T> {
      * @param i
      * @param x
      */
-    void insertElem(int i, T x);
+    void insertElem(int i, T x) throws MyException;
 
     /**
      * 在线性表最后插入x元素
