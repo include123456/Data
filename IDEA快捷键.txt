@@ -1,0 +1,39 @@
+重写get set 构造器 ctrl + insert
+重写 父类方法 ctrl + o 
+关闭左侧文件树 alt +1 
+切换打开的类文件窗口 alt + 左移 或 右移 
+代码提示 alt + enter 
+复制一行 ctrl+d  
+删除一行 ctrl + x 
+根据类名进行查找 ctrl + n
+根据文件进行查找 ctrl +shift + n 
+双击 shift 进行ctrl +shift +alt + n 
+格式化代码 Ctrl+Alt+L   
+移动一行 alt +shift + 上移 或下移 
+查找方法 ctrl +F12  
+
+这榜单阵容太豪华了，后几名都是如此有用，毫不示弱。
+
+  Top #10切来切去：Ctrl+Tab
+
+  Top #9选你所想：Ctrl+W
+
+ Top #8代码生成：Template/Postfix +Tab
+
+  Top #7发号施令：Ctrl+Shift+A
+
+Top #6无处藏身：Shift+Shift、
+
+  Top #5自动完成：Ctrl+Shift+Enter
+
+ Top #4创造万物：Alt+Insert
+
+太难割舍，前三名并列吧！
+
+?  Top #1智能补全：Ctrl+Shift+Space
+
+?  Top #1自我修复：Alt+Enter
+
+?  Top #1重构一切：Ctrl+Shift+Alt+T 
+ 
+
