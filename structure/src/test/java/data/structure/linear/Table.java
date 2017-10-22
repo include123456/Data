@@ -89,15 +89,21 @@ public class Table<T> implements LinearTable<T> {
         if(i>this.len) {
             throw new MyException("this.len=" + this.len + "and i =" + i);
         }
-        Object[] temp= new Object[object.length];
+        Object[] temp= object;
         //数组长度检验
         if(this.len+1 > object.length) {
-            temp = new Object[object.length*2];
+            object = new Object[object.length*2];
+            for(int j=0;j<=temp.length;j++){
+                object[j] = temp[j];
+            }
         }
         //数组移动
-
+        for(int j =this.len - 1;j>=i;j--){
+            object[j+1] = object[j];
+        }
+        object[i] = x;
         //增加链表数量
-
+        this.len++;
     }
 
     public void append(T x) {
